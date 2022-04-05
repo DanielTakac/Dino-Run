@@ -14,20 +14,17 @@ public class StoneMovement : MonoBehaviour{
 
     public float offSet = 0.05f;
 
-    void Start()
-    {
+    void Start(){
 
         startPosition = transform.position.x; //detects the position of the object
         startPositionEnd = endPoint.transform.position.x; //detects the position of the end point
 
     }
 
-    void Update()
-    {
+    void Update(){
 
         //Detects if the object is almost at the same position as at start and teleports it back
-        if (endPoint.transform.position.x >= startPoint.transform.position.x - offSet && endPoint.transform.position.x <= startPoint.transform.position.x + offSet)
-        {
+        if (endPoint.transform.position.x >= startPoint.transform.position.x - offSet && endPoint.transform.position.x <= startPoint.transform.position.x + offSet){
 
             transform.position = new Vector2(startPosition, transform.position.y);
             endPoint.transform.position = new Vector2(startPositionEnd, endPoint.transform.position.y);

@@ -16,12 +16,6 @@ public class Score : MonoBehaviour{
 
     public int scoreFinal;
 
-    void Start(){
-
-
-
-    }
-
     void Update(){
 
         HighscoreText.text = highscore.ToString("D4");
@@ -29,11 +23,7 @@ public class Score : MonoBehaviour{
 
         highscore = PlayerPrefs.GetInt("highscore");
 
-        if(player.GetComponent<PlayerDeath>().hit == false){
-
-            score += Time.deltaTime * 4.6f;
-
-        }
+        if(player.GetComponent<PlayerDeath>().hit == false) score += Time.deltaTime * 4.6f;
 
         scoreFinal = (int)score;
 
@@ -45,11 +35,7 @@ public class Score : MonoBehaviour{
 
         }
 
-        if (Input.GetKeyDown("j")){
-
-            ResetHighscore();
-
-        }
+        if (Input.GetKeyDown("j")) ResetHighscore();
 
     }
 

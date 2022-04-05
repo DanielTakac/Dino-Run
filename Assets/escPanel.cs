@@ -12,39 +12,39 @@ public class escPanel : MonoBehaviour{
 
     void Start(){
 
-	escapePressed = false;
+		escapePressed = false;
         
     }
 
     void Update(){
 
-	if(Input.GetKeyDown("escape")){
+		if(Input.GetKeyDown("escape")){
 	    
-	    if(escapePressed){
+	    	if(escapePressed){
 		
-		Application.Quit();
+				Application.Quit();
 		
-	    }else{
+	    	} else {
 	    
-    	    escapePressed = true;
+    	    	escapePressed = true;
 
-	    Debug.Log("Escape Pressed");
+	    		Debug.Log("Escape Pressed");
 
-	    escapeText.SetActive(true);
+	    		escapeText.SetActive(true);
 
-	    Invoke("ResetEscape", resetDelay);
+	    		Invoke("ResetEscape", resetDelay);
 
-	    }
+	    	}
 	
-	}
+		}
         
     }
 
     public void ResetEscape(){
 	
-	escapePressed = false;
+		escapePressed = false;
 
-	escapeText.SetActive(false);
+		escapeText.SetActive(false);
 	
     }
 
